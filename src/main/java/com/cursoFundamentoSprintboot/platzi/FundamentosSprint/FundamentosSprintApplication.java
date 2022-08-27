@@ -1,5 +1,6 @@
 package com.cursoFundamentoSprintboot.platzi.FundamentosSprint;
 import com.cursoFundamentoSprintboot.platzi.FundamentosSprint.Component.ComponetDependecy;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FundamentosSprintApplication implements CommandLineRunner {
 	private ComponetDependecy componenteDependency;
 
-	public FundamentosSprintApplication(ComponetDependecy componente_dependency) {
+	public FundamentosSprintApplication(@Qualifier("componentTwoImplement") ComponetDependecy componente_dependency) {
 		this.componenteDependency = componente_dependency;
 	}
 
